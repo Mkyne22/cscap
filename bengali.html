@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" contents="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c99e4d26c9.js" crossorigin="anonymous"></script>
+</head>
+<!-------Home------------>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Poetry</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Student Researcher</p>
+            <h1>Hi, I'm <span>Mary Kyne</span><br> from San Francisco</h1>
+        </div>
+</div>
+
+
+<br></div><br>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title"> bengali poetry </h1>
+                <p>something here</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('option 1')">option 1</p>
+                    <p class="tab-links" onclick="opentab('option 2')">option 2</p>
+                    <p class="tab-links" onclick="opentab('option 3')">option 3</p>
+                </div>
+                <div class="tab-contents active-tab" id="option 1">
+                    <ul>
+                        <li><span>Option 1a </span><br>etc</li>
+                        <li><span>Option 1b</span><br>etc</li>
+                        <li><span>Option 1c</span><br>etc</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="option 2">
+                    <ul>
+                        <li><span>Option 2a </span><br>etc</li>
+                        <li><span>Option 2b</span><br>etc</li>
+                        <li><span>Option 2c</span><br>etc</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="option 3">
+                    <ul>
+                        <li><span>Option 3a </span><br>etc</li>
+                        <li><span>Option 3b</span><br>etc</li>
+                        <li><span>Option 3c</span><br>etc</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------Poetry------------>
+<div id="poetry">
+    <div class="container">
+        <h1 class="sub-title"> Poetry</h1>
+        <div class="poem-list">
+            <div>
+                <i class="fa-solid fa-book"></i>
+                <h2>Poem 1</h2>
+                <p>poem here</p>
+                <a href="#">more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-book"></i>
+                <h2>Poem 2</h2>
+                <p>poem here</p>
+                <a href="#">more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-book"></i>
+                <h2>Poem 3</h2>
+                <p>poem here</p>
+                <a href="#">more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
